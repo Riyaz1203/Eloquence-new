@@ -1,8 +1,8 @@
 
 
 .navbar{
-    width: 100%;
-    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: black;
 }
 
@@ -12,8 +12,32 @@
     justify-content: space-evenly;
     gap: 5px;
 }
+
+.launch-time{
+    display: flex;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+.launch-time div{
+    flex-basis: 100px;
+}
+.launch-time div p{
+    font-size: 1rem;
+    margin-bottom: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.launch-time div span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar-nav{
+    text-align: center;
+    justify-content: center;
+}
 .nav-item{
-    margin-left: 50px;
+    text-align: center;
+    justify-content: center;
 }
 
 .nav-text{
@@ -46,7 +70,7 @@
 .eloque-title img{
     width: 100%;
     position: absolute;
-    top: 20%;
+    top: 15%;
     z-index: -1;
 }
 
@@ -63,10 +87,10 @@ overflow: hidden;
 }
 @keyframes moveEllipse2 {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-20%);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(20%);
     }
   }
   
@@ -80,7 +104,7 @@ overflow: hidden;
   }
 .ecllips2{
     position: absolute;
-    width: 70%;
+    width: 300px;
     height: 100px;
     left: 0;
     top: 250px;
@@ -89,6 +113,7 @@ overflow: hidden;
     z-index: -999;
     overflow: hidden;
     animation: moveEllipse2 7s linear infinite alternate;
+    animation: moveEllipse3 7s linear infinite alternate;
     }
     .ecllips3{
         position: absolute;
@@ -109,14 +134,18 @@ a{
     color: white;
     text-transform: uppercase;
 }
+.home{
+    width: 100%;
+    overflow: hidden;
+}
 
 .reg-now{
     font-size: 10px;
     background-color: rgb(7, 0, 74);
     margin: 100px;
     padding: 15px;
+    margin-top: 10px;
     text-align: center;
-    margin-top: 20px;
     letter-spacing: 0.5px;
     border-radius: 5px;
 }
@@ -126,12 +155,17 @@ a{
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 180px;
+    margin-top: 120px;
 }
 .date-venue .datee{
     font-weight: 700;
     letter-spacing: 6px;
-    color: rgb(0, 0, 114);
+    color: rgba(255, 255, 255, 0.881);
+    text-decoration: overline;
+}
+.dateee{
+    font-weight: bold;
+    letter-spacing: 5px;
 }
 .date-venue .venuee span{
     font-weight: 700;
@@ -150,7 +184,6 @@ a{
 .events{
     height:auto;
     text-align: center;
-    margin-top: 150px;
 }
 .events h1{
     font-size: 2.5rem;
@@ -180,11 +213,15 @@ a{
 
 .marketing{
     text-align: center;
+    padding: 0px;
+    width: 100%;
+    margin: 0px;
 }
 
 .co-ordinators{
     position: relative;
     margin-top: 100px;
+    overflow-x: hidden;
 }
 
 .rwo{
@@ -200,6 +237,12 @@ a{
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 1.5rem;
+    color: rgb(183, 64, 0);
+}
+
+.anime-image{
+    position: relative;
+    bottom: 0;
 }
 
 .co-ordi h2{
@@ -207,5 +250,31 @@ a{
     font-size: 1rem;
     font-weight: bolder;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+.co-ordi{
+    margin-top: 10px;
+}
+
+.venue{
+    width: 100%;
+    height: 300px;
+    padding: 0px 5%;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    margin-bottom: 200px;
+}
+.venue iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.venue h1{
+    font-size: 2.5rem;
+    color: rgb(0, 0, 114);
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 50px;
 }
