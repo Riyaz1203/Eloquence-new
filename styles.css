@@ -187,7 +187,7 @@ a{
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 200px;
+    margin-top: 240px;
 }
 .date-venue .datee{
     font-weight: 700;
@@ -254,9 +254,7 @@ a{
 }
 
 .co-ordinators{
-    position: relative;
     margin-top: 100px;
-    overflow-x: hidden;
 }
 
 .rwo{
@@ -268,11 +266,12 @@ a{
 }
 
 .row h1{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 1.5rem;
-    color: rgb(183, 64, 0);
+    color: #E55604;
+    text-decoration: underline;
 }
 
 .anime-image{
