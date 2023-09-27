@@ -251,6 +251,7 @@ a{
     padding: 0px;
     width: 100%;
     margin: 0px;
+    overflow: hidden;
 }
 
 .co-ordinators{
@@ -269,7 +270,7 @@ a{
     margin-bottom: 20px;
     font-weight: bold;
     letter-spacing: 0.5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #E55604;
     text-decoration: underline;
 }
@@ -503,8 +504,8 @@ html {
 
 
       .footer{
-        margin-top: 20px;
+        padding: 20px 0px;
         background-color: black;
         width: 100%;
-        height: 250px;
+        height: 100%;
       }
