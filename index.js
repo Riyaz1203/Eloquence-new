@@ -24,3 +24,79 @@ if(distance < 0){
 
 
 },1000);
+
+
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let header = document.querySelector('header');
+
+menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('open');
+};
+
+function toggleActive(event) {
+  const navLinks = document.querySelectorAll('.nav');
+  navLinks.forEach((link) => {
+    link.classList.remove('active');
+  });
+  const clickedLink = event.target;
+  clickedLink.classList.add('active');
+
+  // Close the navbar
+  menu.classList.remove('bx-x');
+  navbar.classList.remove('open');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const anchorTags = document.querySelectorAll('.nav');
+  const currentPage = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+
+  anchorTags.forEach(function(link) {
+    if (link.getAttribute('href') === '#' + currentPage) {
+      link.classList.add('active');
+    }
+    link.addEventListener('click', toggleActive); // Add event listener to each nav link
+  });
+
+  // Update active navigation link on scroll
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav');
+
+    let currentSection = null;
+    let currentSectionIndex = -1;
+
+    sections.forEach(function(section, index) {
+      const sectionTop = section.offsetTop - 200; // Adjust the offset as needed
+
+      if (window.scrollY >= sectionTop) {
+        currentSection = section;
+        currentSectionIndex = index;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    if (currentSection) {
+      const targetLink = document.querySelector(`.nav[href="#${currentSection.getAttribute('id')}"]`);
+      if (targetLink) {
+        targetLink.classList.add('active');
+      }
+    }
+  });
+});
+
+  
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
