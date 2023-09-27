@@ -794,6 +794,12 @@
         event.target.style.display = "none";
       }
     }
+    window.onpopstate = function (event) {
+  var modals = document.querySelectorAll(".modal");
+  for (var i = 0; i < modals.length; i++) {
+    modals[i].style.display = "none";
+  }
+};
   </script>
 </body>
 </html>
